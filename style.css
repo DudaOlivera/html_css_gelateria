@@ -1,0 +1,332 @@
+/* style.css */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f1f1; /* Cor de fundo geral clara */
+    color: #333;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px; /* Ajustei o padding para as laterais */
+}
+
+/* Estilos para o novo cabeçalho */
+.main-header {
+    background-color: #fddede; /* Rosa claro para o cabeçalho */
+    padding: 15px 0; /* Reduzi o padding vertical */
+    position: sticky; /* Fixa o cabeçalho no topo ao rolar */
+    top: 0;
+    z-index: 100; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav .logo a {
+    color: #e91e63; /* Rosa mais forte para o logo */
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-menu ul li {
+    margin-left: 20px;
+}
+
+.main-menu ul li:first-child {
+    margin-left: 0;
+}
+
+.main-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.main-menu ul li a:hover {
+    color: #e91e63;
+}
+
+.cart-icon a {
+    display: block;
+}
+
+.cart-icon img {
+    width: 24px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: auto;
+}
+
+/* Estilos para a seção Hero (onde a imagem principal agora está) */
+.hero {
+    background-color: #fddede; /* Mesma cor do cabeçalho para continuidade visual */
+    padding-bottom: 20px; /* Adiciona um pouco de espaço abaixo da imagem */
+    text-align: center; /* Centraliza a imagem */
+}
+
+.hero .hero-image {
+    max-width: 960px; /* Garante que a imagem não ultrapasse a largura do container */
+    margin: 0 auto; /* Centraliza a imagem dentro do hero */
+    padding: 20px; /* Adiciona um pouco de espaço ao redor da imagem */
+}
+
+.hero .hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ajustes para as seções seguintes (para não ficarem coladas no cabeçalho fixo) */
+.our-products,
+.about-us,
+.instagram-feed,
+.our-story,
+footer {
+    padding-top: 60px; /* Adiciona um espaçamento acima para compensar o cabeçalho fixo */
+}
+
+.our-products {
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.our-products h2 {
+    color: #e91e63;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.our-products .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.our-products .product-item {
+    background-color: #fce4ec; 
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.our-products .product-item img {
+    display: block; 
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px 8px 0 0; 
+    margin-bottom: 10px; 
+    object-fit: cover; 
+    max-height: 350px; 
+}
+
+.about-us {
+    padding: 40px 0;
+    background-color: #f8bbd0; 
+}
+
+.about-us .container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: flex-start; 
+    gap: 30px; 
+}
+
+.about-us .store-front {
+    flex: 1 1 400px; 
+}
+
+.about-us .store-front img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.about-us .stats {
+    flex: 1 1 300px; 
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.about-us .stats .stat-item {
+    margin-bottom: 20px; 
+}
+
+.about-us .stats .stat-item:last-child {
+    margin-bottom: 0; 
+}
+
+.about-us .stats .stat-item h3 {
+    color: #e91e63;
+    margin-bottom: 5px;
+}
+
+.instagram-feed {
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.instagram-feed h2 {
+    color: #e91e63;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.instagram-feed .instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 10px;
+}
+
+.instagram-feed .instagram-grid .insta-post {
+    position: relative; 
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.instagram-feed .instagram-grid .insta-post img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.instagram-feed .instagram-grid .insta-post:hover img {
+    transform: scale(1.05); 
+}
+
+.instagram-feed .instagram-grid .insta-post.featured {
+    grid-column: span 2; 
+    grid-row: span 1;
+}
+
+.instagram-feed .instagram-grid .insta-post.featured .overlay-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    line-height: 1.2;
+}
+
+@media (max-width: 600px) {
+    .instagram-feed .instagram-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    }
+
+    .instagram-feed .instagram-grid .insta-post.featured {
+        grid-column: span 1; 
+    }
+}
+
+.our-story {
+    padding: 40px 0;
+    background-color: #fddede; 
+}
+
+.our-story .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.our-story .story-text {
+    flex: 1 1 400px;
+}
+
+.our-story .story-text h2 {
+    color: #e91e63;
+    margin-bottom: 15px;
+}
+
+.our-story .story-image {
+    flex: 1 1 300px;
+}
+
+.our-story .story-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #e91e63; 
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .social-links a {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+footer .social-links img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-menu {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .main-menu ul {
+        flex-direction: column;
+    }
+
+    .main-menu ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .about-us .container {
+        flex-direction: column;
+    }
+
+    .our-story .container {
+        flex-direction: column;
+    }
+
+     .our-story .story-image {
+        order: -1;
+        margin-bottom: 20px;
+     }
+    }
