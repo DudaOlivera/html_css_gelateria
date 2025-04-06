@@ -129,13 +129,139 @@ header div img {
     color: #333;
     margin-top: 10px;
 }
+.numeros {
+    display: flex; /* Coloca os filhos (div-img e div-num) lado a lado */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    background-color: #f9caca; /* Cor de fundo rosa claro (similar à imagem) */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin: 20px 0; /* Espaçamento superior e inferior */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    overflow: hidden; /* Garante que o border-radius funcione corretamente */
+}
 
-.numeros{
+.div-img {
+    flex: 1; /* Ocupa uma parte do espaço disponível */
+    margin-right: 20px; /* Espaçamento à direita da imagem */
+    border-radius: 10px; /* Arredonda as bordas da div da imagem */
+    overflow: hidden; /* Garante que a imagem também tenha bordas arredondadas */
+}
+
+.img-numeros {
+    display: block; /* Remove espaço extra abaixo da imagem */
+    width: 80%; /* Faz a imagem ocupar toda a largura da div pai */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: inherit; /* Herda o border-radius da div pai */
+}
+
+.div-num {
+    flex: 1; /* Ocupa a outra parte do espaço disponível */
     display: flex;
-    background-color: #CF8694;
+    flex-direction: column; /* Organiza os stat-items em coluna */
+    gap: 50px; /* Espaçamento entre os stat-items */
+    padding: 20px; /* Espaçamento interno da div de números */
 }
 
-.img-numeros{
-    width: 90%;
+.stat-item {
+    text-align: center; /* Centraliza o texto dentro de cada item */
 }
 
+.stat-item h3 {
+    font-size: 6.5em; /* Tamanho da fonte dos números */
+    color: #d65a5a; /* Cor dos números (rosa mais escuro) */
+    margin-bottom: 2px;
+}
+
+
+.sub-num{
+    font-size: 2.3em; /* Tamanho da fonte dos números */
+}
+
+.p-num{
+    font-size: 1.5rem;
+}
+
+.instagram-feed h2 {
+    color: #000000;
+    font-size: 3em;
+    font-weight: 500;
+    margin-bottom: 60px;
+    margin-top: 5rem;
+    text-align: center; /* Já está centralizado, mantendo */
+    width: 90vw; /* Mantendo a largura */
+    margin-left: auto; /* Adiciona margem automática à esquerda */
+    margin-right: auto; /* Adiciona margem automática à direita */
+    display: block; /* Garante que as margens automáticas funcionem */
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Opcional: Centraliza verticalmente se os itens tiverem alturas diferentes */
+    width: 90vw; /* Mantendo a largura */
+    margin-left: auto; /* Centraliza o container na página */
+    margin-right: auto; /* Centraliza o container na página */
+    margin-bottom: 20px; /* Adiciona um pouco de espaço entre os containers */
+}
+
+.post-insta {
+ padding: 30px;/* Reduzi o padding para melhor espaçamento, ajuste conforme necessário */
+    max-width: 300px; /* Defina uma largura máxima para cada post, ajuste conforme o tamanho desejado */
+     /* Garante que a imagem não ultrapasse a largura máxima */
+     /* Inclui o padding na largura total */
+}
+
+.post-insta img {
+    display: block; /* Remove espaço extra abaixo da imagem */
+  /* Faz a imagem ocupar toda a largura do post-insta */
+/* Mantém a proporção da imagem */
+}
+
+.instagram-feed {
+    display: flex; /* Para centralizar o conteúdo dentro da seção */
+    flex-direction: column; /* Organiza o título e os containers em coluna */
+    align-items: center; /* Centraliza os itens filhos (h2 e containers) */
+    width: 100%; /* Ocupa toda a largura disponível */
+}
+.container-historia {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    width: 100%; /* Alterado para 100% */
+    overflow: hidden;
+    margin-bottom: 40px; /* Adicionado margem inferior para espaçamento */
+}
+
+.texto-historia {
+    flex: 1;
+    padding: 40px;
+    color: #333;
+}
+
+.texto-historia h2 {
+    font-size: 2.5em;
+    color: #d65a5a; /* Cor rosa mais escura para o título */
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: serif; /* Fonte com serifa para o título */
+}
+
+.texto-historia p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.imagem-historia {
+    flex: 1;
+    overflow: hidden;
+}
+
+.imagem-historia img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+}
