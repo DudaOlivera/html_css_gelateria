@@ -98,87 +98,61 @@ header div img:hover {
     width: 99vw;
 }
 .nossos-produtos {
-    width: 70vw;
-    background-color: #EFD7DB;
-    text-align: center;
+    width: 90%;
+    margin: 60px auto;
+    position: relative;
+  }
+  
+  .swiper-wrapper {
     display: flex;
-    justify-content: center;
-    position: relative; /* Para posicionar as setas */
-    margin: 0 auto; /* Centraliza o contêiner na página */
-    margin-bottom: 7rem;
-}
-
-.product-container {
-    display: flex;
-    overflow-x: hidden;
-    gap: 20px;
-    padding: 20px 0;
-    scroll-snap-type: x mandatory;
-    justify-content: center;
-}
-
-.product-item {
-    flex-shrink: 0;
-    width: 350px;
-    text-align: center;
-    background-color: #f5f2f2;
-    border-radius: 8px;
+    
+  }
+  
+  .card-item {
+    background-color: #fce4ec;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    scroll-snap-align: start;
-}
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 1.3em;
 
-.product-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-}
-
-.product-item img {
+  }
+  
+  .card-item img {
     width: 100%;
     height: auto;
-    border-radius: 8px 8px 0 0;
-    margin-bottom: 10px;
-    object-fit: cover;
-}
-
-.product-item p {
-    font-size: 1.2em;
+    border-radius: 10px;
+  }
+  
+  .card-item p {
+    margin: 15px 0 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
     color: #333;
-    margin-top: 10px;
-}
-
-/* Animação de rolagem */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-/* Setas de navegação */
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2em;
-    color: #333;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 10px;
+  }
+  
+  .card-item button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff69b4;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
     cursor: pointer;
-    border-radius: 50%;
-    z-index: 10;
-}
-
-.left-arrow {
-    left: 10px;
-}
-
-.right-arrow {
-    right: 10px;
-}
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #ff69b4;
+    
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #ff69b4;
+  }
+  
 
 .numeros {
     display: flex;
@@ -193,7 +167,16 @@ header div img:hover {
     flex-wrap: wrap;
     gap: 30px;
 }
-
+.swiper {
+    padding: 2rem 0;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* ou center, depende do layout */
+  }
+  
 .div-img {
     flex: 1;
     max-width: 500px;

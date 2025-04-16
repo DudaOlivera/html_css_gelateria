@@ -1,2 +1,0 @@
-// Selecionar elementos
-

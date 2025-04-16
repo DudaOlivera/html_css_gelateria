@@ -8,8 +8,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
+
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <header>
         <div class="logo">
             <a href="#">Frost & Cream</a>
@@ -31,42 +35,85 @@
     <div class="banner">
         <img class="img-banner" src="banner.png" alt="Banner promocional" />
     </div>
-    <div> <h2 class="titulo-prod">Conheça Nossos Produtos</h2></div> 
 
+   
     <section class="nossos-produtos">
-        
-        <div class="arrow left-arrow">&#8592;</div> <!-- seta para a esquerda -->
-        
-        <div class="product-container">
-            <div class="product-item">
-                <img src="images/morango.png" alt="Sorvete de morango" />
+        <div> <h2 class="titulo-prod">Conheça Nossos Produtos</h2></div> 
+
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card-item">
+                <img src="branco.png" alt="Sorvete 1">
                 <p>Sorvete de Morango</p>
+                <button>Comprar</button>
+              </div>
             </div>
-            <div class="product-item">
-                <img src="images/chocolate.png" alt="Sorvete de chocolate amargo" />
-                <p>Chocolate Amargo</p>
-            </div>
-            <div class="product-item">
-                <img src="images/branco.png" alt="Sorvete de chocolate branco" />
-                <p>Chocolate Branco</p>
-            </div>
-            <div class="product-item">
-                <img src="images/morango.png" alt="Sorvete de morango" />
-                <p>Sorvete de Morango</p>
-            </div>
-            <div class="product-item">
-                <img src="images/chocolate.png" alt="Sorvete de chocolate amargo" />
-                <p>Chocolate Amargo</p>
-            </div>
-            <div class="product-item">
-                <img src="images/branco.png" alt="Sorvete de chocolate branco" />
-                <p>Chocolate Branco</p>
-            </div>
+            <div class="swiper-slide">
+                <div class="card-item">
+                  <img src="branco.png" alt="Sorvete 1">
+                  <p>Sorvete de Morango</p>
+                  <button>Comprar</button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-item">
+                  <img src="branco.png" alt="Sorvete 1">
+                  <p>Sorvete de Morango</p>
+                  <button>Comprar</button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-item">
+                  <img src="branco.png" alt="Sorvete 1">
+                  <p>Sorvete de Morango</p>
+                  <button>Comprar</button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-item">
+                  <img src="branco.png" alt="Sorvete 1">
+                  <p>Sorvete de Morango</p>
+                  <button>Comprar</button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-item">
+                  <img src="branco.png" alt="Sorvete 1">
+                  <p>Sorvete de Morango</p>
+                  <button>Comprar</button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-item">
+                  <img src="branco.png" alt="Sorvete 1">
+                  <p>Sorvete de Morango</p>
+                  <button>Comprar</button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="card-item">
+                    <img src="branco.png" alt="Sorvete 1">
+                    <p>Sorvete de Morango</p>
+                    <button>Comprar</button>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card-item">
+                    <img src="branco.png" alt="Sorvete 1">
+                    <p>Sorvete de Morango</p>
+                    <button>Comprar</button>
+                  </div>
+            <!-- mais slides -->
+          </div>
+      
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
-        
-        <div class="arrow right-arrow">&#8594;</div> <!-- seta para a direita -->
-    </section>
-    
+      </section>
+      
+  
     
 
     <section class="numeros">
@@ -164,24 +211,35 @@
     <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
         <img src="images/whatsapp-icon.png" alt="WhatsApp">
     </a>
-<script >const leftArrow = document.querySelector('.left-arrow');
-    const rightArrow = document.querySelector('.right-arrow');
-    const productContainer = document.querySelector('.product-container');
-    
-    // Função para mover a rolagem para a esquerda
-    leftArrow.addEventListener('click', () => {
-        productContainer.scrollBy({
-            left: -300, // Quantidade de rolagem para a esquerda
-            behavior: 'smooth' // Rolagem suave
-        });
-    });
-    
-    // Função para mover a rolagem para a direita
-    rightArrow.addEventListener('click', () => {
-        productContainer.scrollBy({
-            left: 300, // Quantidade de rolagem para a direita
-            behavior: 'smooth' // Rolagem suave
-        });
-    });</script>
+   
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  new Swiper(".swiper", {
+    loop: true,
+    spaceBetween: 30,
+    autoplay: {
+      delay: 3000,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });</script>
+    <script src="script.js"></script>
 </body>
 </html>
