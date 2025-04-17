@@ -99,12 +99,14 @@ header div img:hover {
 }
 .nossos-produtos {
     width: 90%;
+    height: 80vh;
     margin: 60px auto;
     position: relative;
   }
   
   .swiper-wrapper {
     display: flex;
+    margin: 30px;
     
   }
   
@@ -115,8 +117,8 @@ header div img:hover {
     padding: 20px;
     text-align: center;
     width: 100%;
-    max-width: 300px;
-    margin: 1.3em;
+    max-width: 380px;
+   
 
   }
   
@@ -134,7 +136,8 @@ header div img:hover {
   }
   
   .card-item button {
-    padding: 10px 20px;
+    padding: 10px 70px;
+    font-size: 1.1rem;
     border: none;
     background-color: #ff69b4;
     color: white;
@@ -143,16 +146,33 @@ header div img:hover {
     cursor: pointer;
   }
   
-  .swiper-button-prev,
+  .swiper-button-next,
+  .swiper-button-prev {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #ff69b4;
+      z-index: 10;
+      margin: 10px;
+  }
+  
+  .swiper-button-prev {
+      left: 10px;
+     
+  }
+  
   .swiper-button-next {
-    color: #ff69b4;
+      right: 10px;
     
   }
   
-  .swiper-pagination-bullet-active {
-    background: #ff69b4;
-  }
-  
+  .swiper-pagination {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
 
 .numeros {
     display: flex;
@@ -168,13 +188,17 @@ header div img:hover {
     gap: 30px;
 }
 .swiper {
-    padding: 2rem 0;
-  }
+    position: relative;
+
+}
+
   
   .swiper-slide {
     display: flex;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     justify-content: center;
-    align-items: stretch; /* ou center, depende do layout */
+    align-items: center;/* ou center, depende do layout */
   }
   
 .div-img {

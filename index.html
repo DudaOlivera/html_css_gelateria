@@ -84,26 +84,7 @@
                   <button>Comprar</button>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="card-item">
-                  <img src="branco.png" alt="Sorvete 1">
-                  <p>Sorvete de Morango</p>
-                  <button>Comprar</button>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                  <div class="card-item">
-                    <img src="branco.png" alt="Sorvete 1">
-                    <p>Sorvete de Morango</p>
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card-item">
-                    <img src="branco.png" alt="Sorvete 1">
-                    <p>Sorvete de Morango</p>
-                    <button>Comprar</button>
-                  </div>
+             
             <!-- mais slides -->
           </div>
       
@@ -214,32 +195,26 @@
    
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-  new Swiper(".swiper", {
-    loop: true,
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 3,
     spaceBetween: 30,
-    autoplay: {
-      delay: 3000,
-    },
+    loop: true,
     pagination: {
-      el: ".swiper-pagination",
+      el: '.swiper-pagination',
       clickable: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-  });</script>
+      1024: { slidesPerView: 3 },
+      768: { slidesPerView: 2 },
+      480: { slidesPerView: 1 }
+    }
+  });
+</script>
+
     <script src="script.js"></script>
 </body>
 </html>
